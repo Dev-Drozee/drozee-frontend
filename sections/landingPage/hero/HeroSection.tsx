@@ -42,7 +42,7 @@ const HeroSection = () => {
 	return (
 		<section className='w-full'>
 			<div className='lg:pl-20 flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0'>
-				<div className='order-2 w-full px-10 lg:px-0 lg:order-1 lg:w-3/6 flex flex-col justify-center items-start gap-8 lg:gap-10'>
+				<div className='order-2 w-full px-10 lg:px-0 lg:order-1 lg:w-[45%] flex flex-col justify-center items-start gap-8 lg:gap-10'>
 					<h1 className='max-w-[590px] text-3xl lg:text-5xl font-serif lg:leading-snug'>
 						Amp up learning potential via
 						<span className='text-secondary'> synergizing credentials</span>
@@ -98,8 +98,9 @@ const HeroSection = () => {
 						</p>
 					</div>
 				</div>
-				<div className='order-1 ml-auto w-5/6 min-h-[55vh] lg:order-2 lg:ml-0 lg:w-3/6 lg:min-h-[calc(100vh-5vh)] bg-primary rounded-tl-[100px] rounded-br-[100px] flex justify-center items-center'>
-					<div className='w-full relative right-[10%] top-8'>
+				<div className='order-1 py-20 relative ml-auto w-5/6 lg:order-2 lg:ml-0 lg:w-[55%] lg:py-28 flex justify-center items-center'>
+					<div className='w-[90%] h-full bg-primary rounded-tl-[100px] rounded-br-[100px] absolute z-0 top-0 right-0' />
+					<div className='w-full relative top-6'>
 						<Image src={DashboardImg} alt='Dashboard' />
 					</div>
 				</div>

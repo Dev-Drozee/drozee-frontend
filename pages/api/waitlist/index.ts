@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 
-import { connectToDatabase } from 'utils/mongoDB/mongoDB';
+import { connectToDatabase } from 'utils/mongoDB';
 
 type Data = {
 	email?: string;
