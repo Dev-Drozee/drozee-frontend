@@ -20,7 +20,7 @@ const Navbar = () => {
 
 	useEffect(() => {
 		window.onscroll = () => {
-			if (document.documentElement.scrollTop > 100) {
+			if (document.documentElement.scrollTop > 50) {
 				if (navbarRef && navbarRef.current) {
 					setNavbarScrolled(true);
 				}
@@ -28,7 +28,7 @@ const Navbar = () => {
 				setNavbarScrolled(false);
 			}
 		};
-	});
+	}, []);
 
 	return (
 		<nav
