@@ -86,7 +86,7 @@ const Navbar = () => {
 							</svg>
 							<ul className='hidden group-hover:block w-max absolute top-6 left-0 z-10 bg-white text-black rounded-lg py-4 px-8'>
 								<li className='py-1'>
-									<Link href='/' passHref>
+									<Link href='/dashboard' passHref>
 										<a
 											title='Folio'
 											aria-label='Folio'
@@ -97,7 +97,7 @@ const Navbar = () => {
 									</Link>
 								</li>
 								<li className='py-1'>
-									<Link href='/' passHref>
+									<Link href='/dashboard' passHref>
 										<a
 											title='Learn Track'
 											aria-label='Learn Track'
@@ -108,7 +108,7 @@ const Navbar = () => {
 									</Link>
 								</li>
 								<li className='py-1'>
-									<Link href='/' passHref>
+									<Link href='/dashboard' passHref>
 										<a
 											title='Learn Path'
 											aria-label='Learn Path'
@@ -119,7 +119,7 @@ const Navbar = () => {
 									</Link>
 								</li>
 								<li className='py-1'>
-									<Link href='/' passHref>
+									<Link href='/dashboard' passHref>
 										<a
 											title='StepDegree'
 											aria-label='StepDegree'
@@ -133,14 +133,14 @@ const Navbar = () => {
 						</div>
 					</li>
 					<li>
-						<Link href='/' passHref>
-							<a className='text-white' title='Know us' aria-label='Know us'>
-								Know us
+						<Link href='/about-us' passHref>
+							<a className='text-white' title='About us' aria-label='About us'>
+								About us
 							</a>
 						</Link>
 					</li>
 					<li>
-						<Link href='/' passHref>
+						<Link href='/partners' passHref>
 							<a className='text-white' title='Partners' aria-label='Partners'>
 								Partners
 							</a>
@@ -205,7 +205,7 @@ const Navbar = () => {
 							</div>
 							<ul className='hidden group-hover:flex flex-col justify-center items-center w-max py-4 px-8'>
 								<li className='py-1'>
-									<Link href='/' passHref>
+									<Link href='/dashboard' passHref>
 										<a
 											title='Folio'
 											aria-label='Folio'
@@ -216,7 +216,7 @@ const Navbar = () => {
 									</Link>
 								</li>
 								<li className='py-1'>
-									<Link href='/' passHref>
+									<Link href='/dashboard' passHref>
 										<a
 											title='Learn Track'
 											aria-label='Learn Track'
@@ -227,7 +227,7 @@ const Navbar = () => {
 									</Link>
 								</li>
 								<li className='py-1'>
-									<Link href='/' passHref>
+									<Link href='/dashboard' passHref>
 										<a
 											title='Learn Path'
 											aria-label='Learn Path'
@@ -238,7 +238,7 @@ const Navbar = () => {
 									</Link>
 								</li>
 								<li className='py-1'>
-									<Link href='/' passHref>
+									<Link href='/dashboard' passHref>
 										<a
 											title='StepDegree'
 											aria-label='StepDegree'
@@ -252,14 +252,14 @@ const Navbar = () => {
 						</div>
 					</li>
 					<li>
-						<Link href='/' passHref>
+						<Link href='/know-us' passHref>
 							<a className='text-white' title='Know us' aria-label='Know us'>
 								Know us
 							</a>
 						</Link>
 					</li>
 					<li>
-						<Link href='/' passHref>
+						<Link href='/partners' passHref>
 							<a className='text-white' title='Partners' aria-label='Partners'>
 								Partners
 							</a>
@@ -280,6 +280,7 @@ const Navbar = () => {
 				<button
 					className='mr-2 flex flex-col justify-center items-center gap-[5px]'
 					onClick={onMobileMenuClick}
+					aria-label='Menu'
 				>
 					<span
 						className={`inline-block w-9 h-[2px] bg-white transition-all duration-200 ${

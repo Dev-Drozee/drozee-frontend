@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import axios from 'utils/axiosInstance';
 
-const HeroSection = () => {
+const AlphaAccessPage = () => {
 	const [isSubmited, setIsSubmited] = useState(false);
 
 	const nameRef = useRef<HTMLInputElement>(null);
@@ -130,4 +130,4 @@ const HeroSection = () => {
 	);
 };
 
-export default HeroSection;
+export default AlphaAccessPage;

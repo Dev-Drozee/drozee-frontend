@@ -6,10 +6,10 @@ import Navbar from 'sections/navbar/Navbar';
 import Footer from 'sections/footer/Footer';
 
 // Section Components
-import HeroSection from 'sections/landingPage/hero/HeroSection';
-import DetailsSection from 'sections/landingPage/details/DetailsSection';
-import BenefitsSection from 'sections/landingPage/benefits/BenefitsSection';
-import NewsletterSection from 'sections/landingPage/newsletter/NewsletterSection';
+import HeroSection from 'sections/landingPage/HeroSection';
+import DetailsSection from 'sections/landingPage/DetailsSection';
+import BenefitsSection from 'sections/landingPage/BenefitsSection';
+import NewsletterSection from 'sections/landingPage/NewsletterSection';
 
 const Home: NextPage = () => {
 	return (

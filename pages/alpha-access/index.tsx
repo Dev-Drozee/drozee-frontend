@@ -5,7 +5,7 @@ import Head from 'next/head';
 import Navbar from 'sections/navbar/Navbar';
 import Footer from 'sections/footer/Footer';
 
-import HeroSection from 'sections/alphaAccessPage/Hero/HeroSection';
+import AlphaAccessPage from 'sections/alphaAccessPage/AlphaAccessPage';
 
 const AlphaAccess: NextPage = () => {
 	return (
@@ -16,7 +16,7 @@ const AlphaAccess: NextPage = () => {
 
 			<Navbar />
 			<main>
-				<HeroSection />
+				<AlphaAccessPage />
 			</main>
 			<Footer />
 		</>
