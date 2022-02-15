@@ -252,7 +252,7 @@ const Navbar = () => {
 						</div>
 					</li>
 					<li>
-						<Link href='/know-us' passHref>
+						<Link href='/about-us' passHref>
 							<a className='text-white' title='Know us' aria-label='Know us'>
 								Know us
 							</a>
