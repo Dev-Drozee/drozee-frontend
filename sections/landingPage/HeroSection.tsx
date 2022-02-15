@@ -15,7 +15,7 @@ const HeroSection = () => {
 		if (emailRef && emailRef.current) {
 			await axios({
 				method: 'POST',
-				url: 'api/waitlist',
+				url: 'waitlist',
 				headers: {
 					'content-type': 'application/json'
 				},

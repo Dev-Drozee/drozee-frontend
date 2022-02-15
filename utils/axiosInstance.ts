@@ -8,7 +8,7 @@ const configs = {
 		SERVER_URI: `http://localhost:${port}/`
 	},
 	production: {
-		SERVER_URI: 'https://drozee.com/'
+		SERVER_URI: 'https://api.drozee.com/'
 	},
 	test: {
 		SERVER_URI: `http://localhost:${port}/`

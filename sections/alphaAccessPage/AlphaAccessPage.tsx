@@ -20,7 +20,7 @@ const AlphaAccessPage = () => {
 		) {
 			await axios({
 				method: 'POST',
-				url: 'api/alpha_access',
+				url: 'alpha_access',
 				headers: {
 					'content-type': 'application/json'
 				},
