@@ -10,7 +10,7 @@ const NewsletterSection = () => {
 		if (emailRef && emailRef.current) {
 			await axios({
 				method: 'POST',
-				url: 'api/newsletter',
+				url: 'newsletter',
 				headers: {
 					'content-type': 'application/json'
 				},

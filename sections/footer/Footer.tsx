@@ -10,35 +10,35 @@ const Footer = () => {
 					</h3>
 					<ul className='flex flex-col justify-start items-start gap-2 text-sm'>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/about-us' passHref>
 								<a title='Drozee Overview' aria-label='Drozee Overview'>
 									Drozee Overview
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/'>
+							<Link href='/dashboard'>
 								<a title='Learn Path' aria-label='Learn Path'>
 									LearnPath
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/dashboard' passHref>
 								<a title='StepDegree' aria-label='StepDegree'>
 									StepDegree
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/dashboard' passHref>
 								<a title='Skill Match' aria-label='Skill Match'>
 									Skill Match
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/dashboard' passHref>
 								<a title='TopSlot' aria-label='TopSlot'>
 									TopSlot
 								</a>
@@ -66,28 +66,28 @@ const Footer = () => {
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/dashboard' passHref>
 								<a title='Spotlight' aria-label='Spotlight'>
 									Spotlight
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/'>
+							<Link href='/under-development'>
 								<a title='Customer Stories' aria-label='Customer Stories'>
 									Customer Stories
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/under-development' passHref>
 								<a title='Our Heroes' aria-label='Our Heroes'>
 									Our Heroes
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/under-development' passHref>
 								<a title='Pricing' aria-label='Pricing'>
 									Pricing
 								</a>
@@ -101,28 +101,28 @@ const Footer = () => {
 					</h3>
 					<ul className='flex flex-col justify-start items-start gap-2 text-sm'>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/under-development' passHref>
 								<a title='Help Center' aria-label='Help Center'>
 									Help Center
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/under-development' passHref>
 								<a title='Blog' aria-label='Blog'>
 									Blog
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/under-development' passHref>
 								<a title='Community' aria-label='Community'>
 									Community
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/under-development' passHref>
 								<a title='Developers' aria-label='Developer'>
 									Developers
 								</a>
@@ -136,28 +136,28 @@ const Footer = () => {
 					</h3>
 					<ul className='flex flex-col justify-start items-start gap-2 text-sm'>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/under-development' passHref>
 								<a title='Academics' aria-label='Academics'>
 									Academics
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/under-development' passHref>
 								<a title='Corporates' aria-label='Corporates'>
 									Corporates
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/under-development' passHref>
 								<a title='Recruiters' aria-label='Recruiters'>
 									Recruiters
 								</a>
 							</Link>
 						</li>
 						<li>
-							<Link href='/' passHref>
+							<Link href='/under-development' passHref>
 								<a title='Startups' aria-label='Startups'>
 									Startups
 								</a>

@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react';
 import axios from 'utils/axiosInstance';
 
-const HeroSection = () => {
+const AlphaAccessPage = () => {
 	const [isSubmited, setIsSubmited] = useState(false);
 
 	const nameRef = useRef<HTMLInputElement>(null);
@@ -20,7 +20,7 @@ const HeroSection = () => {
 		) {
 			await axios({
 				method: 'POST',
-				url: 'api/alpha_access',
+				url: 'alpha_access',
 				headers: {
 					'content-type': 'application/json'
 				},
@@ -50,10 +50,10 @@ const HeroSection = () => {
 	};
 
 	return (
-		<section className='w-full min-h-screen'>
-			<div className='pl-20 flex justify-between items-center'>
-				<div className='w-3/6 flex flex-col justify-center items-start gap-10'>
-					<h1 className='max-w-[590px] text-5xl font-serif leading-snug text-black'>
+		<section className='pt-24 lg:pt-0 w-full min-h-screen'>
+			<div className='lg:pl-20 flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0'>
+				<div className='w-full px-10 lg:px-0 lg:w-[45%] flex flex-col justify-center items-start gap-8 lg:gap-10'>
+					<h1 className='max-w-[590px] text-3xl lg:text-5xl font-serif lg:leading-snug'>
 						Apply for Early Access
 					</h1>
 					<div className='max-w-[590px] flex flex-wrap justify-start items-center gap-4'>
@@ -71,9 +71,9 @@ const HeroSection = () => {
 						</span>
 					</div>
 				</div>
-				<div className='w-3/6 min-h-[calc(100vh-5vh)] bg-primary rounded-tl-[100px] rounded-br-[100px] flex justify-start items-center'>
+				<div className='ml-auto py-20 lg:ml-0 lg:py-28 w-full xl:w-3/6 xl:bg-primary rounded-tl-[100px] rounded-br-[100px] flex justify-center items-center'>
 					<form className='px-14' onSubmit={(event) => onSubmitHandler(event)}>
-						<div className='py-10 px-14 bg-white rounded-xl flex flex-col gap-4 shadow-2xl shadow-[rgba(0,0,0,0.25)]'>
+						<div className='py-10 px-14 bg-white rounded-xl flex flex-col gap-4 shadow-lg xl:shadow-2xl shadow-[rgba(0,0,0,0.25)]'>
 							<h2 className='mb-4 text-2xl font-normal font-serif text-center'>
 								Please fill this form
 							</h2>
@@ -130,4 +130,4 @@ const HeroSection = () => {
 	);
 };
 
-export default HeroSection;
+export default AlphaAccessPage;

@@ -6,7 +6,7 @@ import ThirdSVG from 'assets/sections/details/detail_third.svg';
 
 const DetailsSection = () => {
 	return (
-		<section className='py-20 px-10 md:px-24'>
+		<section className='py-20 px-10 md:px-24 relative'>
 			<h2 className='max-w-xs md:max-w-xl mx-auto text-center text-lg md:text-3xl font-bold font-serif'>
 				Join to become part of fastest growing community
 				<div className='inline-block w-max relative ml-4'>
@@ -52,12 +52,12 @@ const DetailsSection = () => {
 					</svg>
 				</div>
 			</h2>
-			<div className='mt-28 md:mt-40 flex flex-col gap-20 xl:gap-40'>
-				<div className='flex flex-col xl:flex-row justify-between items-start gap-10 xl:gap-0'>
-					<div className='min-w-[330px] min-h-[265px] md:min-w-[450px] md:min-h-[362px] relative'>
-						<div className='w-full h-[90%] bg-primary rounded-tr-[50px] rounded-br-[50px]  md:rounded-tr-3xl md:rounded-br-3xl absolute bottom-0 left-0 -z-[1]'></div>
-						<div className='w-full h-full flex justify-center items-center relative -top-12'>
-							<FirstSVG />
+			<div className='mt-20 md:mt-40 flex flex-col items-center gap-20 xl:gap-40'>
+				<div className='flex flex-col xl:flex-row justify-between items-start gap-10 xl:gap-14'>
+					<div className='w-full md:w-[450px] md:min-h-[362px] relative left-0 right-0'>
+						<div className='w-full h-full bg-primary md:h-[90%] md:rounded-tr-3xl md:rounded-br-3xl absolute bottom-0 left-0 -z-[1]'></div>
+						<div className='w-full h-full flex justify-center items-center md:relative md:-top-12'>
+							<FirstSVG className='scale-90 lg:scale-100' />
 						</div>
 					</div>
 					<div className='max-w-2xl flex flex-col gap-5'>
@@ -77,11 +77,12 @@ const DetailsSection = () => {
 						</p>
 					</div>
 				</div>
-				<div className='flex flex-col xl:flex-row justify-between items-start gap-10 xl:gap-0'>
-					<div className='ml-auto xl:ml-0 xl:order-2 min-w-[330px] min-h-[265px] md:min-w-[450px] md:min-h-[362px] relative'>
-						<div className='w-full h-[90%] bg-primary rounded-tl-[50px] rounded-bl-[50px] md:rounded-tl-3xl md:rounded-bl-3xl absolute bottom-0 left-0 -z-[1]'></div>
-						<div className='w-full h-full flex justify-center items-center relative -top-12'>
-							<SecondSVG />
+
+				<div className='flex flex-col xl:flex-row justify-between items-start gap-10 xl:gap-14'>
+					<div className='ml-auto xl:ml-0 xl:order-2 w-full md:w-[450px] md:min-h-[362px] relative left-0 right-0'>
+						<div className='w-full h-full bg-primary md:h-[90%] md:rounded-tl-3xl md:rounded-bl-3xl absolute bottom-0 left-0 -z-[1]'></div>
+						<div className='w-full h-full flex justify-center items-center md:relative md:-top-12'>
+							<SecondSVG className='scale-90 lg:scale-100' />
 						</div>
 					</div>
 					<div className='xl:order-1 max-w-2xl flex flex-col gap-5'>
@@ -101,11 +102,12 @@ const DetailsSection = () => {
 						</p>
 					</div>
 				</div>
-				<div className='flex flex-col xl:flex-row justify-between items-start gap-10 xl:gap-0'>
-					<div className='min-w-[330px] min-h-[265px] md:min-w-[450px] md:min-h-[362px] relative'>
-						<div className='w-full h-[90%] bg-primary rounded-tr-[50px] rounded-br-[50px]  md:rounded-tr-3xl md:rounded-br-3xl absolute bottom-0 left-0 -z-[1]'></div>
-						<div className='w-full h-full flex justify-center items-center relative -top-12'>
-							<ThirdSVG />
+
+				<div className='flex flex-col xl:flex-row justify-between items-start gap-10 xl:gap-14'>
+					<div className='w-full md:w-[450px] md:min-h-[362px] relative left-0 right-0'>
+						<div className='w-full h-full bg-primary md:h-[90%] md:rounded-tr-3xl md:rounded-br-3xl absolute bottom-0 left-0 -z-[1]'></div>
+						<div className='w-full h-full flex justify-center items-center md:relative md:-top-12'>
+							<ThirdSVG className='scale-90 lg:scale-100' />
 						</div>
 					</div>
 					<div className='max-w-2xl flex flex-col gap-5'>
