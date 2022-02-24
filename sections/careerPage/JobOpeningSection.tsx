@@ -1,27 +1,29 @@
 const JobOpeningSection = () => {
 	return (
 		<section
-			className='overflow-hidden relative pt-36 pb-96 px-8'
+			className='overflow-hidden relative pt-10 pb-56 px-2 lg:pt-36 lg:pb-96 lg:px-8'
 			id='job_openings'
 		>
-			<h2 className='max-w-xl mx-auto text-center text-6xl font-bold text-primary'>
+			<h2 className='max-w-xl mx-auto text-center text-4xl lg:text-6xl font-bold text-primary'>
 				Job Openings
 			</h2>
-			<p className='max-w-2xl mx-auto mt-4 text-lg text-center'>
+			<p className='max-w-2xl mx-auto mt-4 text-base lg:text-lg text-center'>
 				Explore our open roles for working totally remote.
 			</p>
-			<div className='px-20'>
+			<div className='px-6 lg:px-20'>
 				{/* Product Related Jobs */}
 				<div className='mt-10 flex flex-col justify-start items-start gap-5'>
-					<h3 className='text-2xl text-secondary font-bold'>Product</h3>
+					<h3 className='text-base lg:text-2xl text-secondary font-bold'>
+						Product
+					</h3>
 					<div className='w-full'>
 						{/* Single Job Format */}
 						<div className='flex justify-between items-center'>
-							<h4 className='text-lg font-medium text-primary'>
+							<h4 className='text-sm lg:text-lg font-medium text-primary'>
 								Chief Learning Officer
 							</h4>
-							<p className='text-lg text-primary'>Remote</p>
-							<button className='py-2 px-6 rounded bg-primary text-white font-semibold cursor-pointer'>
+							<p className='hidden md:block text-lg text-primary'>Remote</p>
+							<button className='py-2 px-3 md:px-6 text-sm lg:text-base rounded-xl lg:rounded bg-primary text-white font-semibold cursor-pointer'>
 								View More
 							</button>
 						</div>

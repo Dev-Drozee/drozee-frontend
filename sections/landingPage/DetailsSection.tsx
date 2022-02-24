@@ -66,14 +66,15 @@ const DetailsSection = () => {
 							<span className='text-support-1'> Everyday!</span>
 						</h3>
 						<p className='text-sm md:text-lg xl:text-xl'>
-							Follow AI Guided learning Recommendation, compare 1000s of
-							courses. Learn only those skills that are required! Follow tips &
-							sugesions to stand ahead of rat race.
+							Tend towards the AI-backed recommendations for acing your
+							preferred choice of skillsets. Explore and compare the best from
+							over 1000s of courses. Personalised tips and suggestions exist,
+							for steering you through your learning journey.
 						</p>
 						<p className='text-sm md:text-lg xl:text-xl'>
 							<span className='text-secondary font-medium'>Fun Part: </span>We
-							We don’t own a single paid course. Ours will be free. God promise.{' '}
-							<Emoji symbol='&#128526;' label='smiling face with sunglasses' />
+							Interestingly, all of it is cost-free and we swear by it.{' '}
+							<Emoji symbol='&#129303;' label='smiling face with sunglasses' />
 						</p>
 					</div>
 				</div>
@@ -87,18 +88,18 @@ const DetailsSection = () => {
 					</div>
 					<div className='xl:order-1 max-w-2xl flex flex-col gap-5'>
 						<h3 className='text-2xl md:text-3xl xl:text-5xl font-serif xl:leading-tight'>
-							Let us sort everything for you,
-							<span className='text-support-2'> Important One!</span>
+							Centralise and integrate your resources and
+							<span className='text-support-2'> credentials!</span>
 						</h3>
 						<p className='text-sm md:text-lg xl:text-xl'>
-							CV, Portfolio, Academics documents & your skill certificates.
-							Everything will be at one place, Seriously that paper file system
-							is outdated and corporate trust us.
+							You can now declutter your folders and systematise the approach to
+							storing, of your academic credentials, all at one dais. Be it- CV,
+							Portfolios or Skill certificates!
 						</p>
 						<p className='text-sm md:text-lg xl:text-xl'>
-							<span className='text-secondary font-medium'>Bonus: </span>
-							We’ll reward you for your activities with points or vouchers.{' '}
-							<Emoji symbol='&#127881;' label='celebration, party hat' />
+							<span className='text-secondary font-medium'>P.S.: </span>
+							Bonus points and rewards awaits on completion of some activities.{' '}
+							<Emoji symbol='&#128175;' label='celebration, party hat' />
 						</p>
 					</div>
 				</div>
@@ -112,20 +113,20 @@ const DetailsSection = () => {
 					</div>
 					<div className='max-w-2xl flex flex-col gap-5'>
 						<h3 className='text-2xl md:text-3xl xl:text-5xl font-serif xl:leading-tight'>
-							Something should be surprise,
+							There’s definitely still more to come,
 							<span className='text-support-3'> Signup Now!</span>
 						</h3>
 						<p className='text-sm md:text-lg xl:text-xl'>
-							Our team of good product designers & developers are working day &
-							night to introduce new features. Jobs, Interships & many more
-							coming soon.
+							Our team of product designers and developers hustled enough to
+							introduce constructive features. However, we do have some exciting
+							new features on the horizon as well! Jobs, internships and much
+							more are yet to come…
 						</p>
 						<p className='text-sm md:text-lg xl:text-xl'>
 							<span className='text-secondary font-medium'>Secret: </span>
-							We’re too excited so typed random features and now we have to work
-							on random features.{' '}
+							So, take time by the forelock and start enrolling!{' '}
 							<Emoji
-								symbol='&#128517;'
+								symbol='&#9996;'
 								label='smiling face with open mouth and cold sweat emoji'
 							/>
 						</p>

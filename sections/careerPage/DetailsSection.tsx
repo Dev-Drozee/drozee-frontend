@@ -6,7 +6,7 @@ import CareerLearnAndGrowImg from 'public/career_learn_and_grow.png';
 
 const DetailsSection = () => {
 	return (
-		<section className='py-20 px-10 md:px-30 relative'>
+		<section className='py-16 px-4 md:py-20 md:px-30 relative overflow-x-hidden'>
 			<h2 className='max-w-xl mx-auto text-center text-3xl md:text-6xl font-bold text-primary'>
 				Our values
 			</h2>
@@ -15,12 +15,12 @@ const DetailsSection = () => {
 					"Our values are the underpinning for all that we do at Drozee — we believe that a great product is going to solve people's problem."
 				}
 			</p>
-			<div className='mt-20 flex flex-col items-center gap-20 xl:gap-40'>
-				<div className='flex flex-col xl:flex-row justify-between items-center gap-10 xl:gap-20'>
+			<div className='mt-10 md:mt-20 flex flex-col items-center gap-10 md:gap-16 xl:gap-40'>
+				<div className='flex flex-col xl:flex-row justify-between items-center gap-4 md:gap-12 xl:gap-20'>
 					<div className='order-2 xl:order-1 max-w-lg flex flex-col gap-5'>
-						<h3 className='text-4xl xl:text-6xl font-serif text-secondary xl:leading-tight'>
+						<h3 className='text-2xl md:text-4xl xl:text-6xl font-serif text-secondary xl:leading-tight'>
 							Love
-							<br className='hidden xl:block' /> each other
+							<br /> each other
 						</h3>
 						<p className='text-primary text-sm md:text-lg'>
 							We find people who add to our culture, not just fit in. We look
@@ -29,7 +29,7 @@ const DetailsSection = () => {
 							move us forward.
 						</p>
 					</div>
-					<div className='order-1 xl:order-2 min-w-[450px] min-h-[362px] relative'>
+					<div className='order-1 xl:order-2 min-w-[310px] min-h-[250px] md:min-w-[450px] md:min-h-[362px] relative'>
 						<div className='w-full h-full md:rounded-tl-3xl md:rounded-bl-3xl overflow-hidden'>
 							<Image
 								src={LoveEachOtherImg}
@@ -40,7 +40,7 @@ const DetailsSection = () => {
 							/>
 						</div>
 						<svg
-							className='absolute -bottom-[20%] -left-[20%] -z-[1] scale-50 md:scale-75 xl:scale-100'
+							className='absolute -bottom-[20%] -left-[20%] -z-[1] md:-bottom-[10%] md:-left-[10%] scale-50 md:scale-75 xl:scale-100'
 							width='217'
 							height='180'
 							viewBox='0 0 217 180'
@@ -60,16 +60,16 @@ const DetailsSection = () => {
 
 				<div className='flex flex-col xl:flex-row justify-between items-center gap-10 xl:gap-20'>
 					<div className='order-2 max-w-lg flex flex-col gap-5'>
-						<h3 className='text-4xl xl:text-6xl font-serif text-secondary xl:leading-tight'>
+						<h3 className='text-2xl md:text-4xl xl:text-6xl font-serif text-secondary xl:leading-tight'>
 							Solve
-							<br className='hidden xl:block' /> problems
+							<br /> problems
 						</h3>
 						<p className='text-primary text-sm md:text-lg'>
 							Our goal at Drozee is to help people who have potential to work
 							but no one gave them the opportunity.
 						</p>
 					</div>
-					<div className='order-1 min-w-[450px] min-h-[362px] relative'>
+					<div className='order-1 min-w-[310px] min-h-[250px] md:min-w-[450px] md:min-h-[362px] relative'>
 						<div className='w-full h-full md:rounded-tr-3xl md:rounded-br-3xl overflow-hidden'>
 							<Image
 								src={SolveProblemImg}
@@ -80,7 +80,7 @@ const DetailsSection = () => {
 							/>
 						</div>
 						<svg
-							className='absolute -bottom-[15%] -right-[15%] -z-[1] scale-50 md:scale-75 xl:scale-100'
+							className='absolute -bottom-[20%] -right-[20%] -z-[1] md:-bottom-[15%] md:-right-[15%] scale-75 xl:scale-100'
 							width='199'
 							height='199'
 							viewBox='0 0 199 199'
@@ -100,16 +100,16 @@ const DetailsSection = () => {
 
 				<div className='flex flex-col xl:flex-row justify-between items-center gap-10 xl:gap-20'>
 					<div className='order-2 xl:order-1 max-w-lg flex flex-col gap-5'>
-						<h3 className='text-4xl xl:text-6xl font-serif text-secondary xl:leading-tight'>
+						<h3 className='text-2xl md:text-4xl xl:text-6xl font-serif text-secondary xl:leading-tight'>
 							Learn
-							<br className='hidden xl:block' /> and grow
+							<br /> and grow
 						</h3>
 						<p className='text-primary text-sm md:text-lg'>
 							We help each other on learning process so that we are growing
 							together as team and as individuals.
 						</p>
 					</div>
-					<div className='order-1 xl:order-2 min-w-[450px] min-h-[362px] relative'>
+					<div className='order-1 xl:order-2 min-w-[310px] min-h-[250px] md:min-w-[450px] md:min-h-[362px] relative'>
 						<div className='w-full h-full md:rounded-tl-3xl md:rounded-bl-3xl overflow-hidden'>
 							<Image
 								src={CareerLearnAndGrowImg}
@@ -120,7 +120,7 @@ const DetailsSection = () => {
 							/>
 						</div>
 						<svg
-							className='absolute -bottom-[20%] -left-[20%] xl:-bottom-[15%] xl:-left-[15%] -z-[1] scale-50 md:scale-75 xl:scale-100'
+							className='absolute -bottom-[30%] -left-[25%] md:-bottom-[20%] xl:-bottom-[15%] xl:-left-[15%] -z-[1] scale-50 md:scale-75 xl:scale-100'
 							width='247'
 							height='247'
 							viewBox='0 0 247 247'
