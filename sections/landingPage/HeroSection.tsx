@@ -47,10 +47,10 @@ const HeroSection = () => {
 						Amp up learning potential via
 						<span className='text-secondary'> synergizing credentials</span>
 					</h1>
-					<h4 className='max-w-[560px] text-sm lg:text-base'>
+					<h2 className='max-w-[560px] text-sm lg:text-base'>
 						Now manage, Compare & showcase your whole learning journey at one
 						place. Save time & money.
-					</h4>
+					</h2>
 					<div className='w-full mt-4 lg:mt-10'>
 						<form
 							className='w-full max-w-sm flex justify-start items-center'
@@ -101,7 +101,13 @@ const HeroSection = () => {
 				<div className='order-1 py-20 relative ml-auto w-5/6 lg:order-2 lg:ml-0 lg:w-[55%] lg:py-28 flex justify-center items-center'>
 					<div className='w-[90%] h-full bg-primary rounded-tl-[100px] rounded-br-[100px] absolute z-0 top-0 right-0' />
 					<div className='w-full relative top-6'>
-						<Image src={DashboardImg} alt='Dashboard' />
+						<Image
+							src={DashboardImg}
+							alt='Dashboard Demo'
+							width={745}
+							height={543}
+							priority
+						/>
 					</div>
 				</div>
 			</div>
