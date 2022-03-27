@@ -19,6 +19,7 @@ const Navbar = () => {
 	};
 
 	useEffect(() => {
+		// Changes navbar styles from normal to glassmorphic
 		window.onscroll = () => {
 			if (document.documentElement.scrollTop > 50) {
 				if (navbarRef && navbarRef.current) {
@@ -35,9 +36,10 @@ const Navbar = () => {
 			className='w-full fixed top-0 left-0 right-0 min-h-[8vh] z-50'
 			ref={navbarRef}
 		>
+			{/* Desktop Navbar */}
 			<div
 				className={`hidden xl:py-6 xl:px-20 xl:flex xl:justify-between xl:items-center ${
-					navbarScrolled ? 'backdrop-blur-3xl bg-black bg-opacity-60' : null
+					navbarScrolled ? 'backdrop-blur-3xl bg-black bg-opacity-80' : null
 				} transition-all duration-200`}
 			>
 				<div className='w-max'>
@@ -84,8 +86,8 @@ const Navbar = () => {
 									strokeLinecap='round'
 								/>
 							</svg>
-							<ul className='hidden group-hover:block w-max absolute top-6 left-0 z-10 bg-white text-black rounded-lg py-4 px-8'>
-								<li className='py-1'>
+							<ul className='hidden group-hover:block w-max absolute top-6 left-0 z-10 bg-white text-black rounded-lg py-4 px-8 shadow-md'>
+								<li className='pb-2'>
 									<Link href='/dashboard' passHref>
 										<a
 											title='Folio'
@@ -96,7 +98,7 @@ const Navbar = () => {
 										</a>
 									</Link>
 								</li>
-								<li className='py-1'>
+								<li className='pb-2'>
 									<Link href='/dashboard' passHref>
 										<a
 											title='Learn Track'
@@ -107,7 +109,7 @@ const Navbar = () => {
 										</a>
 									</Link>
 								</li>
-								<li className='py-1'>
+								<li className='pb-2'>
 									<Link href='/dashboard' passHref>
 										<a
 											title='Learn Path'
@@ -118,7 +120,7 @@ const Navbar = () => {
 										</a>
 									</Link>
 								</li>
-								<li className='py-1'>
+								<li>
 									<Link href='/dashboard' passHref>
 										<a
 											title='StepDegree'
@@ -159,9 +161,10 @@ const Navbar = () => {
 					</li>
 				</ul>
 			</div>
+			{/* Mobile Navbar */}
 			<div
 				className={`w-full py-4 px-4 flex justify-between items-center relative xl:hidden ${
-					menu ? 'bg-primary' : 'backdrop-blur-3xl bg-black bg-opacity-60'
+					menu ? 'bg-primary' : 'backdrop-blur-3xl bg-black bg-opacity-80'
 				}`}
 			>
 				<div className='w-max'>
@@ -283,17 +286,17 @@ const Navbar = () => {
 					aria-label='Menu'
 				>
 					<span
-						className={`inline-block w-9 h-[2px] bg-white transition-all duration-200 ${
+						className={`inline-block w-8 h-[2px] bg-white transition-all duration-200 ${
 							menu ? 'rotate-45 translate-y-2' : null
 						} `}
 					></span>
 					<span
-						className={`inline-block w-9 h-[2px] bg-white transition-all duration-200 ${
+						className={`inline-block w-8 h-[2px] bg-white transition-all duration-200 ${
 							menu ? 'opacity-0' : null
 						} `}
 					></span>
 					<span
-						className={`inline-block w-9 h-[2px] bg-white transition-all duration-200 ${
+						className={`inline-block w-8 h-[2px] bg-white transition-all duration-200 ${
 							menu ? '-rotate-45 -translate-y-2' : null
 						} `}
 					></span>

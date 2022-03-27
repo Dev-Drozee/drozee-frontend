@@ -52,7 +52,7 @@ const DetailsSection = () => {
 					</svg>
 				</div>
 			</h2>
-			<div className='mt-20 md:mt-40 flex flex-col items-center gap-20 xl:gap-40'>
+			<div className='mt-20 xl:mt-40 flex flex-col items-center gap-20 xl:gap-40'>
 				<div className='flex flex-col xl:flex-row justify-between items-start gap-10 xl:gap-14'>
 					<div className='w-full md:w-[450px] md:min-h-[362px] relative left-0 right-0'>
 						<div className='w-full h-full bg-primary md:h-[90%] md:rounded-tr-3xl md:rounded-br-3xl absolute bottom-0 left-0 -z-[1]'></div>

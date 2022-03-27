@@ -43,7 +43,7 @@ const HeroSection = () => {
 		<section className='w-full'>
 			<div className='lg:pl-20 flex flex-col lg:flex-row justify-between items-center gap-4 lg:gap-0'>
 				<div className='order-2 w-full px-10 lg:px-0 lg:order-1 lg:w-[45%] flex flex-col justify-center items-start gap-8 lg:gap-10'>
-					<h1 className='max-w-[590px] text-3xl lg:text-5xl font-serif lg:leading-snug'>
+					<h1 className='max-w-[590px] text-3xl xl:text-5xl font-serif lg:leading-snug'>
 						Amp up learning potential via
 						<span className='text-secondary'> synergizing credentials</span>
 					</h1>

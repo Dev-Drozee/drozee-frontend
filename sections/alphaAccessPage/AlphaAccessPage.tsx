@@ -71,13 +71,13 @@ const AlphaAccessPage = () => {
 						</span>
 					</div>
 				</div>
-				<div className='ml-auto py-20 lg:ml-0 lg:py-28 w-full xl:w-3/6 xl:bg-primary rounded-tl-[100px] rounded-br-[100px] flex justify-center items-center'>
+				<div className='ml-auto py-10 ld:py-20 lg:ml-0 lg:py-28 w-full xl:w-3/6 xl:bg-primary md:rounded-tl-[100px] md:rounded-br-[100px] flex justify-center items-center'>
 					<form className='px-14' onSubmit={(event) => onSubmitHandler(event)}>
-						<div className='py-10 px-14 bg-white rounded-xl flex flex-col gap-4 shadow-lg xl:shadow-2xl shadow-[rgba(0,0,0,0.25)]'>
+						<div className='w-full py-10 px-12 bg-white rounded-xl flex flex-col gap-4 md:shadow-lg xl:shadow-2xl shadow-[rgba(0,0,0,0.25)]'>
 							<h2 className='mb-4 text-2xl font-normal font-serif text-center'>
 								Please fill this form
 							</h2>
-							<div className='w-full flex flex-col justify-start items-start gap-4'>
+							<div className='w-full min-w-[310px] flex flex-col justify-start items-start gap-4'>
 								<label className='w-full'>
 									<p className='text-base font-normal text-black mb-2'>Name</p>
 									<input
