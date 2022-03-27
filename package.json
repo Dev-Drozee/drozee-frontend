@@ -1,6 +1,10 @@
 {
 	"name": "drozee",
 	"private": true,
+	"engines": {
+		"npm": ">=8.5.0",
+		"node": ">=16.14.2"
+	},
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
