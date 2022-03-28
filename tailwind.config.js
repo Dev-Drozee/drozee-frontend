@@ -24,7 +24,8 @@ module.exports = {
 				secondary: withOpacity('--clr-secondary'),
 				'support-1': withOpacity('--clr-support-1'),
 				'support-2': withOpacity('--clr-support-2'),
-				'support-3': withOpacity('--clr-support-3')
+				'support-3': withOpacity('--clr-support-3'),
+				'border-light': withOpacity('--clr-border-light')
 			},
 			textColor: {
 				primary: withOpacity('--clr-text-primary'),
