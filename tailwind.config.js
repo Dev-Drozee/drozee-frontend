@@ -12,6 +12,7 @@ const withOpacity = (colorVariable) => {
 module.exports = {
 	content: [
 		'./pages/**/*.{js,ts,jsx,tsx}',
+		'./layout/**/*.{js,ts,jsx,tsx}',
 		'./sections/**/*.{js,ts,jsx,tsx}',
 		'./components/**/*.{js,ts,jsx,tsx}'
 	],
@@ -25,11 +26,14 @@ module.exports = {
 				'support-1': withOpacity('--clr-support-1'),
 				'support-2': withOpacity('--clr-support-2'),
 				'support-3': withOpacity('--clr-support-3'),
-				'border-light': withOpacity('--clr-border-light')
+				'border-light': withOpacity('--clr-border-light'),
+				'muted-primary': withOpacity('--clr-text-muted-primary'),
+				'dashboard-light': withOpacity('--clr-dashboard-light')
 			},
 			textColor: {
 				primary: withOpacity('--clr-text-primary'),
-				secondary: withOpacity('--clr-text-secondary')
+				secondary: withOpacity('--clr-text-secondary'),
+				'muted-primary': withOpacity('--clr-text-muted-primary')
 			},
 			fontFamily: {
 				sans: ['Poppins', ...defaultTheme.fontFamily.sans],
@@ -37,8 +41,11 @@ module.exports = {
 			},
 			transitionProperty: {
 				right: 'right'
+			},
+			gridTemplateColumns: {
+				'dashboard-layout': '210px auto 384px'
 			}
 		}
 	},
-	plugins: []
+	plugins: ['tailwindcss', 'postcss-preset-env']
 };
