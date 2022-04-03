@@ -39,7 +39,7 @@ const Navbar = () => {
 			{/* Desktop Navbar */}
 			<div
 				className={`hidden xl:py-6 xl:px-20 xl:flex xl:justify-between xl:items-center ${
-					navbarScrolled ? 'backdrop-blur-3xl bg-black bg-opacity-80' : null
+					navbarScrolled ? 'backdrop-blur-3xl bg-black bg-opacity-20' : null
 				} transition-all duration-200`}
 			>
 				<div className='w-max'>
@@ -164,7 +164,7 @@ const Navbar = () => {
 			{/* Mobile Navbar */}
 			<div
 				className={`w-full py-4 px-4 flex justify-between items-center relative xl:hidden ${
-					menu ? 'bg-primary' : 'backdrop-blur-3xl bg-black bg-opacity-80'
+					menu ? 'bg-primary' : 'backdrop-blur-3xl bg-black bg-opacity-20'
 				}`}
 			>
 				<div className='w-max'>

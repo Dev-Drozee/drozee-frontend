@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 // icons
 import DarkLogo from 'assets/logo/small_primary_dashed_logo.svg';
@@ -16,13 +17,19 @@ interface DashboardLayoutProps {
 }
 
 const DashboardLayout = ({ children, rightSidebar }: DashboardLayoutProps) => {
+	const router = useRouter();
+	console.log(router.pathname);
+
+	const navbarLinksCSSClasses =
+		'px-6 py-2 flex justify-start items-center gap-4 hover:bg-primary rounded transition-all duration-200 text-base hover:text-white stroke-1 stroke-muted-primary hover:stroke-white';
+
 	return (
 		<main className='w-full min-h-screen bg-dashboard-light relative grid grid-cols-dashboard-layout gap-4'>
 			{/* Left Navbar for features main page */}
-			<nav className='w-max max-w-sm max-h-screen py-10 px-10 col-span-1 flex flex-col justify-between items-start gap-20 sticky top-0'>
+			<nav className='w-max max-w-sm min-h-screen max-h-screen py-10 px-4 col-span-1 flex flex-col justify-between items-start gap-20 sticky top-0'>
 				<Link href='/' passHref>
 					<a
-						className='flex justify-start items-center gap-4'
+						className='px-6 py-2 flex justify-start items-center gap-4'
 						title='Go back to home page'
 						aria-label='Go back to home page'
 					>
@@ -32,57 +39,103 @@ const DashboardLayout = ({ children, rightSidebar }: DashboardLayoutProps) => {
 				</Link>
 
 				<ul className='w-full flex flex-col justify-center items-center gap-8'>
-					<li className='w-full text-muted-primary hover:text-secondary'>
-						<Link href='/dashboard/overview' passHref>
-							<a className='flex justify-start items-center gap-4'>
+					<li className='w-full text-muted-primary'>
+						<Link href='/dashboard' passHref>
+							<a
+								className={`${navbarLinksCSSClasses} ${
+									router.pathname === '/dashboard' &&
+									'bg-primary text-white stroke-white'
+								}`}
+								title='Dashboard'
+								aria-label='Dashboard'
+							>
 								<DashboardLogo />
-								<p className='text-base'>Dashboard</p>
+								<p>Dashboard</p>
 							</a>
 						</Link>
 					</li>
 					<li className='w-full text-muted-primary hover:text-secondary'>
-						<Link href='/dashboard/overview' passHref>
-							<a className='flex justify-start items-center gap-4'>
+						<Link href='/dashboard/learntrack' passHref>
+							<a
+								className={`${navbarLinksCSSClasses} ${
+									router.pathname === '/dashboard/learntrack' &&
+									'bg-primary text-white stroke-white'
+								}`}
+								title='Learn Track'
+								aria-label='Learn Track'
+							>
 								<LearnTrackLogo />
-								<p className='text-base'>LearnTrack</p>
+								<p>LearnTrack</p>
 							</a>
 						</Link>
 					</li>
 					<li className='w-full text-muted-primary hover:text-secondary'>
-						<Link href='/dashboard/overview' passHref>
-							<a className='flex justify-start items-center gap-4'>
+						<Link href='/dashboard/learnpath' passHref>
+							<a
+								className={`${navbarLinksCSSClasses} ${
+									router.pathname === '/dashboard/learnpath' &&
+									'bg-primary text-white stroke-white'
+								}`}
+								title='Learn Path'
+								aria-label='Learn Path'
+							>
 								<LearnPathLogo />
-								<p className='text-base'>LearnPath</p>
+								<p>LearnPath</p>
 							</a>
 						</Link>
 					</li>
 					<li className='w-full text-muted-primary hover:text-secondary'>
-						<Link href='/dashboard/overview' passHref>
-							<a className='flex justify-start items-center gap-4'>
+						<Link href='/dashboard/stepdegree' passHref>
+							<a
+								className={`${navbarLinksCSSClasses} ${
+									router.pathname === '/dashboard/stepdegree' &&
+									'bg-primary text-white stroke-white'
+								}`}
+								title='StepDegree'
+								aria-label='StepDegree'
+							>
 								<StepDegreeLogo />
-								<p className='text-base'>StepDegree</p>
+								<p>StepDegree</p>
 							</a>
 						</Link>
 					</li>
 					<li className='w-full text-muted-primary hover:text-secondary'>
-						<Link href='/dashboard/overview' passHref>
-							<a className='flex justify-start items-center gap-4'>
+						<Link href='/dashboard/folio' passHref>
+							<a
+								className={`${navbarLinksCSSClasses} ${
+									router.pathname === '/dashboard/folio' &&
+									'bg-primary text-white stroke-white'
+								}`}
+								title='Folio'
+								aria-label='Folio'
+							>
 								<FolioLogo />
-								<p className='text-base'>Folio</p>
+								<p>Folio</p>
 							</a>
 						</Link>
 					</li>
 					<li className='w-full text-muted-primary hover:text-secondary'>
-						<Link href='/dashboard/overview' passHref>
-							<a className='flex justify-start items-center gap-4'>
+						<Link href='/dashboard/settings' passHref>
+							<a
+								className={`${navbarLinksCSSClasses} stroke-[0.05] hover:fill-white ${
+									router.pathname === '/dashboard/settings' &&
+									'bg-primary text-white stroke-white'
+								}`}
+								title='Settings'
+								aria-label='Settings'
+							>
 								<SettingsLogo />
-								<p className='text-base'>Settings</p>
+								<p>Settings</p>
 							</a>
 						</Link>
 					</li>
 				</ul>
 
-				<button className='px-6 py-2 flex justify-start items-center gap-4 text-muted-primary hover:bg-primary rounded group'>
+				<button
+					className='px-6 py-2 w-full flex justify-start items-center gap-4 text-muted-primary hover:bg-primary rounded group transition-all duration-200'
+					title='Logout'
+					aria-label='Logout'
+				>
 					<LogoutIcon className='fill-muted-primary group-hover:fill-white' />
 					<p className='text-sm text-muted-primary font-normal group-hover:text-white'>
 						Log Out
