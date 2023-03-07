@@ -19,14 +19,10 @@ const UnderDevelopment = () => {
 					<h2 className='mb-10 text-xl xl:text-5xl font-semibold text-primary'>
 						Underconstruction
 					</h2>
-					<Link href='/' passHref>
-						<a
-							title='Go back home'
-							aria-label='Go back home'
-							className='py-3 px-4 text-base md:py-4 md:px-6 md:text-lg text-white bg-primary rounded'
-						>
-							Go back home
-						</a>
+					<Link href='/' title='Go back home'
+						aria-label='Go back home'
+						className='py-3 px-4 text-base md:py-4 md:px-6 md:text-lg text-white bg-primary rounded'>
+						Go back home
 					</Link>
 				</div>
 

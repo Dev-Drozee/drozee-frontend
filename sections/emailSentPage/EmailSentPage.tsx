@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import DarkMobileLogo from 'assets/logo/small_primary_dashed_logo.svg';
 import Emoji from 'components/emoji/Emoji';
@@ -62,15 +62,11 @@ const EmailSentPage = () => {
 	return (
 		<section className='w-full h-screen flex'>
 			<div className='w-max absolute top-8 left-10 z-10'>
-				<Link href='/' passHref>
-					<a
-						className='flex justify-start items-center gap-3'
-						title='Go back home'
-						aria-label='Go back home'
-					>
-						<DarkMobileLogo className='scale-125' />
-						<p className='text-primary text-2xl'>Drozee</p>
-					</a>
+				<Link href='/' className='flex justify-start items-center gap-3'
+					title='Go back home'
+					aria-label='Go back home'>
+					<DarkMobileLogo className='scale-125' />
+					<p className='text-primary text-2xl'>Drozee</p>
 				</Link>
 			</div>
 			<section className='w-full h-full flex justify-center items-center'>
@@ -115,14 +111,10 @@ const EmailSentPage = () => {
 						<p className='text-base text-primary'>
 							Please try again after some time.
 						</p>
-						<Link href='/' passHref>
-							<a
-								className='mt-2 text-secondary text-base py-1 border-b-[1px] border-secondary'
-								title='Go back to landing page'
-								aria-label='Go back to landing page'
-							>
-								Go back home
-							</a>
+						<Link href='/' className='mt-2 text-secondary text-base py-1 border-b-[1px] border-secondary'
+							title='Go back to landing page'
+							aria-label='Go back to landing page'>
+							Go back home
 						</Link>
 					</div>
 				)}

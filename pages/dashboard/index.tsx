@@ -12,7 +12,7 @@ const Dashboard: NextPage = () => {
 				<title>Dashboard</title>
 			</Head>
 			<DashboardLayout rightSidebar={<div>Right Side bar</div>}>
-				<div>
+				<div className='text-justify'>
 					Lorem ipsum dolor sit amet consectetur adipisicing elit. Error id
 					ratione cumque sunt, amet alias excepturi quas a magnam asperiores.
 					Nisi libero accusamus natus, officia temporibus iusto error excepturi

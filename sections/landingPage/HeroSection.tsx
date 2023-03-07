@@ -1,7 +1,7 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 
-import { useState, useRef } from 'react';
+import { useRef, useState } from 'react';
 import axios from 'utils/axiosInstance';
 
 import DashboardImg from 'public/dashboard_demo.png';
@@ -66,9 +66,8 @@ const HeroSection = () => {
 							<button
 								type='submit'
 								aria-label='Join beta accses'
-								className={`py-3 lg:py-4 px-6 rounded-r-md text-white ${
-									isSubmited ? 'bg-support-1' : 'bg-primary'
-								}  hover:cursor-pointer`}
+								className={`py-3 lg:py-4 px-6 rounded-r-md text-white ${isSubmited ? 'bg-support-1' : 'bg-primary'
+									}  hover:cursor-pointer`}
 							>
 								<svg
 									width='32'
@@ -86,14 +85,10 @@ const HeroSection = () => {
 						</form>
 						<p className='mt-4 text-xs'>
 							Don’t worry, we won’t charge our alpha users. Free forever{' '}
-							<Link href='/alpha-access' passHref>
-								<a
-									className='text-secondary'
-									title='Join alpha Program'
-									aria-label='Join alpha Program'
-								>
-									join now.
-								</a>
+							<Link href='/alpha-access' className='text-secondary'
+								title='Join alpha Program'
+								aria-label='Join alpha Program'>
+								join now.
 							</Link>
 						</p>
 					</div>

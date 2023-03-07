@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import { useRef } from 'react';
 import { useRouter } from 'next/router';
+import { useRef } from 'react';
 
 import LightMobileLogo from 'assets/logo/small_white_dashed_logo.svg';
 import LoginPageSvg from 'assets/sections/login/login_page.svg';
@@ -24,15 +24,11 @@ const LoginPage = () => {
 	return (
 		<section className='w-full h-screen flex'>
 			<div className='w-max absolute top-8 left-10 z-10'>
-				<Link href='/' passHref>
-					<a
-						className='flex justify-start items-center gap-3'
-						title='Go back home'
-						aria-label='Go back home'
-					>
-						<LightMobileLogo className='scale-125' />
-						<p className='text-white text-2xl'>Drozee</p>
-					</a>
+				<Link href='/' className='flex justify-start items-center gap-3'
+					title='Go back home'
+					aria-label='Go back home'>
+					<LightMobileLogo className='scale-125' />
+					<p className='text-white text-2xl'>Drozee</p>
 				</Link>
 			</div>
 			<section className='w-2/3 bg-primary-dark flex justify-center items-center'>
