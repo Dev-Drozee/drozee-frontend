@@ -16,14 +16,10 @@ const HeroSection = () => {
 						nanodegrees recognized by the industry!
 					</h4>
 					<div className='w-full mt-2 lg:mt-10'>
-						<Link href='/career/#job_openings' passHref>
-							<a
-								className='inline-block text-center py-3 px-0 w-full md:w-max md:py-4 md:px-6 bg-secondary text-white text-base font-medium rounded-xl md:rounded-lg tracking-wide'
-								title='See open positions'
-								aria-label='See open positions'
-							>
-								See open positions
-							</a>
+						<Link href='/career/#job_openings' className='inline-block text-center py-3 px-0 w-full md:w-max md:py-4 md:px-6 bg-secondary text-white text-base font-medium rounded-xl md:rounded-lg tracking-wide'
+							title='See open positions'
+							aria-label='See open positions'>
+							See open positions
 						</Link>
 					</div>
 				</div>

@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import Link from 'next/link';
 
@@ -38,30 +38,24 @@ const Navbar = () => {
 		>
 			{/* Desktop Navbar */}
 			<div
-				className={`hidden xl:py-6 xl:px-20 xl:flex xl:justify-between xl:items-center ${
-					navbarScrolled ? 'backdrop-blur-3xl bg-black bg-opacity-80' : null
-				} transition-all duration-200`}
+				className={`hidden xl:py-6 xl:px-20 xl:flex xl:justify-between xl:items-center ${navbarScrolled ? 'backdrop-blur-3xl bg-black bg-opacity-20' : null
+					} transition-all duration-200`}
 			>
 				<div className='w-max'>
-					<Link href='/' passHref>
-						<a
-							title='Home'
-							aria-label='Home'
-							className='flex justify-center items-center gap-3'
-						>
-							{navbarScrolled ? (
-								<LightMonitorLogo aria-label='Logo' />
-							) : (
-								<DarkMonitorLogo aria-label='Logo' />
-							)}
-							<p
-								className={`text-xl font-medium ${
-									navbarScrolled ? 'text-white' : 'text-primary'
+					<Link href='/' title='Home'
+						aria-label='Home'
+						className='flex justify-center items-center gap-3'>
+						{navbarScrolled ? (
+							<LightMonitorLogo aria-label='Logo' />
+						) : (
+							<DarkMonitorLogo aria-label='Logo' />
+						)}
+						<p
+							className={`text-xl font-medium ${navbarScrolled ? 'text-white' : 'text-primary'
 								}`}
-							>
-								Drozee
-							</p>
-						</a>
+						>
+							Drozee
+						</p>
 					</Link>
 				</div>
 				<ul className='flex justify-center items-center gap-12'>
@@ -88,100 +82,70 @@ const Navbar = () => {
 							</svg>
 							<ul className='hidden group-hover:block w-max absolute top-6 left-0 z-10 bg-white text-black rounded-lg py-4 px-8 shadow-md'>
 								<li className='pb-2'>
-									<Link href='/dashboard' passHref>
-										<a
-											title='Folio'
-											aria-label='Folio'
-											className='hover:text-secondary'
-										>
-											Folio
-										</a>
+									<Link href='/dashboard' title='Folio'
+										aria-label='Folio'
+										className='hover:text-secondary'>
+										Folio
 									</Link>
 								</li>
 								<li className='pb-2'>
-									<Link href='/dashboard' passHref>
-										<a
-											title='Learn Track'
-											aria-label='Learn Track'
-											className='hover:text-secondary'
-										>
-											LearnTrack
-										</a>
+									<Link href='/dashboard' title='Learn Track'
+										aria-label='Learn Track'
+										className='hover:text-secondary'>
+										LearnTrack
 									</Link>
 								</li>
 								<li className='pb-2'>
-									<Link href='/dashboard' passHref>
-										<a
-											title='Learn Path'
-											aria-label='Learn Path'
-											className='hover:text-secondary'
-										>
-											LearnPath
-										</a>
+									<Link href='/dashboard' title='Learn Path'
+										aria-label='Learn Path'
+										className='hover:text-secondary'>
+										LearnPath
 									</Link>
 								</li>
 								<li>
-									<Link href='/dashboard' passHref>
-										<a
-											title='StepDegree'
-											aria-label='StepDegree'
-											className='hover:text-secondary'
-										>
-											StepDegree
-										</a>
+									<Link href='/dashboard' title='StepDegree'
+										aria-label='StepDegree'
+										className='hover:text-secondary'>
+										StepDegree
 									</Link>
 								</li>
 							</ul>
 						</div>
 					</li>
 					<li>
-						<Link href='/about-us' passHref>
-							<a className='text-white' title='About us' aria-label='About us'>
-								About us
-							</a>
+						<Link href='/about-us' className='text-white' title='About us' aria-label='About us'>
+							About us
 						</Link>
 					</li>
 					<li>
-						<Link href='/partners' passHref>
-							<a className='text-white' title='Partners' aria-label='Partners'>
-								Partners
-							</a>
+						<Link href='/partners' className='text-white' title='Partners' aria-label='Partners'>
+							Partners
 						</Link>
 					</li>
 					<li>
-						<Link href='/alpha-access' passHref>
-							<a
-								className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
-								title='Alpha Access'
-								aria-label='Alpha Access'
-							>
-								Alpha Access
-							</a>
+						<Link href='/alpha-access' className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
+							title='Alpha Access'
+							aria-label='Alpha Access'>
+							Alpha Access
 						</Link>
 					</li>
 				</ul>
 			</div>
 			{/* Mobile Navbar */}
 			<div
-				className={`w-full py-4 px-4 flex justify-between items-center relative xl:hidden ${
-					menu ? 'bg-primary' : 'backdrop-blur-3xl bg-black bg-opacity-80'
-				}`}
+				className={`w-full py-4 px-4 flex justify-between items-center relative xl:hidden ${menu ? 'bg-primary' : 'backdrop-blur-3xl bg-black bg-opacity-20'
+					}`}
 			>
 				<div className='w-max'>
-					<Link href='/' passHref>
-						<a
-							title='Home'
-							aria-label='Home'
-							className='flex justify-center items-center gap-3'
-						>
-							<LightMobileLogo aria-label='Logo' />
-						</a>
+					<Link href='/' title='Home'
+						aria-label='Home'
+						className='flex justify-center items-center gap-3'>
+						<LightMobileLogo aria-label='Logo' />
 					</Link>
 				</div>
 				<ul
-					className={`${
-						menu ? 'right-0' : '-right-full'
-					} absolute top-14 w-full min-h-[calc(100vh-7vh)] flex flex-col justify-center items-center gap-12 bg-primary transition-right`}
+					className={`${menu ? 'right-0' : '-right-full'
+						} absolute top-14 w-full min-h-[calc(100vh-7vh)] flex flex-col justify-center items-center gap-12 bg-primary transition-right`}
 				>
 					<li>
 						<div
@@ -208,75 +172,51 @@ const Navbar = () => {
 							</div>
 							<ul className='hidden group-hover:flex flex-col justify-center items-center w-max py-4 px-8'>
 								<li className='py-1'>
-									<Link href='/dashboard' passHref>
-										<a
-											title='Folio'
-											aria-label='Folio'
-											className='hover:text-secondary'
-										>
-											Folio
-										</a>
+									<Link href='/dashboard' title='Folio'
+										aria-label='Folio'
+										className='hover:text-secondary'>
+										Folio
 									</Link>
 								</li>
 								<li className='py-1'>
-									<Link href='/dashboard' passHref>
-										<a
-											title='Learn Track'
-											aria-label='Learn Track'
-											className='hover:text-secondary'
-										>
-											LearnTrack
-										</a>
+									<Link href='/dashboard' title='Learn Track'
+										aria-label='Learn Track'
+										className='hover:text-secondary'>
+										LearnTrack
 									</Link>
 								</li>
 								<li className='py-1'>
-									<Link href='/dashboard' passHref>
-										<a
-											title='Learn Path'
-											aria-label='Learn Path'
-											className='hover:text-secondary'
-										>
-											LearnPath
-										</a>
+									<Link href='/dashboard' title='Learn Path'
+										aria-label='Learn Path'
+										className='hover:text-secondary'>
+										LearnPath
 									</Link>
 								</li>
 								<li className='py-1'>
-									<Link href='/dashboard' passHref>
-										<a
-											title='StepDegree'
-											aria-label='StepDegree'
-											className='hover:text-secondary'
-										>
-											StepDegree
-										</a>
+									<Link href='/dashboard' title='StepDegree'
+										aria-label='StepDegree'
+										className='hover:text-secondary'>
+										StepDegree
 									</Link>
 								</li>
 							</ul>
 						</div>
 					</li>
 					<li>
-						<Link href='/about-us' passHref>
-							<a className='text-white' title='Know us' aria-label='Know us'>
-								About us
-							</a>
+						<Link href='/about-us' className='text-white' title='Know us' aria-label='Know us'>
+							About us
 						</Link>
 					</li>
 					<li>
-						<Link href='/partners' passHref>
-							<a className='text-white' title='Partners' aria-label='Partners'>
-								Partners
-							</a>
+						<Link href='/partners' className='text-white' title='Partners' aria-label='Partners'>
+							Partners
 						</Link>
 					</li>
 					<li>
-						<Link href='/alpha-access' passHref>
-							<a
-								className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
-								title='Alpha Access'
-								aria-label='Alpha Access'
-							>
-								Alpha Access
-							</a>
+						<Link href='/alpha-access' className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
+							title='Alpha Access'
+							aria-label='Alpha Access'>
+							Alpha Access
 						</Link>
 					</li>
 				</ul>
@@ -286,19 +226,16 @@ const Navbar = () => {
 					aria-label='Menu'
 				>
 					<span
-						className={`inline-block w-8 h-[2px] bg-white transition-all duration-200 ${
-							menu ? 'rotate-45 translate-y-2' : null
-						} `}
+						className={`inline-block w-8 h-[2px] bg-white transition-all duration-200 ${menu ? 'rotate-45 translate-y-2' : null
+							} `}
 					></span>
 					<span
-						className={`inline-block w-8 h-[2px] bg-white transition-all duration-200 ${
-							menu ? 'opacity-0' : null
-						} `}
+						className={`inline-block w-8 h-[2px] bg-white transition-all duration-200 ${menu ? 'opacity-0' : null
+							} `}
 					></span>
 					<span
-						className={`inline-block w-8 h-[2px] bg-white transition-all duration-200 ${
-							menu ? '-rotate-45 -translate-y-2' : null
-						} `}
+						className={`inline-block w-8 h-[2px] bg-white transition-all duration-200 ${menu ? '-rotate-45 -translate-y-2' : null
+							} `}
 					></span>
 				</button>
 			</div>
