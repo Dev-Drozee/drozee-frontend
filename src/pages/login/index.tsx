@@ -1,8 +1,17 @@
+import { useAuth } from '@clerk/nextjs';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import LoginPage from 'sections/loginPage/LoginPage';
 
-const Index = () => {
+export default function Index() {
+	const router = useRouter();
+	const { isSignedIn } = useAuth();
+
+	if (isSignedIn) {
+		router.replace('/dashboard');
+	}
+
 	return (
 		<>
 			<Head>
@@ -14,5 +23,3 @@ const Index = () => {
 		</>
 	);
 };
-
-export default Index;

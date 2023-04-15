@@ -47,5 +47,9 @@ module.exports = {
 			}
 		}
 	},
-	plugins: ['tailwindcss', 'postcss-preset-env']
+	plugins: [
+		'tailwindcss',
+		'postcss-preset-env',
+		require('prettier-plugin-tailwindcss')
+	]
 };

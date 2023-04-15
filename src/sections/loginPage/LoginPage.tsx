@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useRef } from 'react';
 
+import { SignIn } from '@clerk/nextjs';
 import LightMobileLogo from 'assets/logo/small_white_dashed_logo.svg';
 import LoginPageSvg from 'assets/sections/login/login_page.svg';
 import Emoji from 'components/emoji/Emoji';
@@ -37,7 +38,8 @@ const LoginPage = () => {
 				</div>
 			</section>
 			<section className='w-1/3 bg-white flex justify-center items-center'>
-				<div className='w-max max-w-sm flex flex-col justify-start items-start gap-6'>
+				<SignIn />
+				{/* <div className='w-max max-w-sm flex flex-col justify-start items-start gap-6'>
 					<h1 className='text-2xl text-secondary font-semibold'>
 						Welcome to Drozee!
 						<Emoji symbol='&#128075;' label='waving hand emoji' />
@@ -63,7 +65,7 @@ const LoginPage = () => {
 							Send an magic email
 						</button>
 					</form>
-				</div>
+				</div> */}
 			</section>
 		</section>
 	);

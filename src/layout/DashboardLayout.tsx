@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 // icons
+import { useClerk } from '@clerk/nextjs';
 import DarkLogo from 'assets/logo/small_primary_dashed_logo.svg';
 import DashboardLogo from 'assets/sections/dashboard/navbar_icon_dashboard.svg';
 import FolioLogo from 'assets/sections/dashboard/navbar_icon_folio.svg';
@@ -18,6 +19,12 @@ interface DashboardLayoutProps {
 
 const DashboardLayout = ({ children, rightSidebar }: DashboardLayoutProps) => {
 	const router = useRouter();
+	const { signOut } = useClerk();
+
+	const signOutHandler = async () => {
+		await signOut();
+		router.push('/')
+	}
 
 	const navbarLinksCSSClasses =
 		'px-6 py-2 flex justify-start items-center gap-4 hover:bg-primary rounded transition-all duration-200 text-base hover:text-white stroke-1 stroke-muted-primary hover:stroke-white';
@@ -99,6 +106,7 @@ const DashboardLayout = ({ children, rightSidebar }: DashboardLayoutProps) => {
 					className='px-6 py-2 w-full flex justify-start items-center gap-4 text-muted-primary hover:bg-primary rounded group transition-all duration-200'
 					title='Logout'
 					aria-label='Logout'
+					onClick={() => signOutHandler()}
 				>
 					<LogoutIcon className='fill-muted-primary group-hover:fill-white' />
 					<p className='text-sm text-muted-primary font-normal group-hover:text-white'>

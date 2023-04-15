@@ -1,20 +1,20 @@
 import type { NextPage } from 'next';
-import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
 
 import DashboardLayout from 'layout/DashboardLayout';
 
 const DashboardPages: NextPage = () => {
 	const router = useRouter();
-	const { DashboardPageName } = router.query;
+	const { slug } = router.query;
 
 	return (
 		<>
 			<Head>
-				<title>{DashboardPageName?.toString()}</title>
+				<title>{slug?.toString()}</title>
 			</Head>
 			<DashboardLayout rightSidebar={<div>Right Side bar</div>}>
-				<div>{DashboardPageName?.toString()}</div>
+				<div>{slug?.toString()}</div>
 			</DashboardLayout>
 		</>
 	);

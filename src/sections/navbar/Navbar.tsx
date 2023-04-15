@@ -123,11 +123,16 @@ const Navbar = () => {
 						</Link>
 					</li>
 					<li>
-						<Link href='/alpha-access' className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
+						<Link href='/login' className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
+							title='Login'
+							aria-label='Login'>
+							Login / Signup
+						</Link>
+						{/* <Link href='/alpha-access' className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
 							title='Alpha Access'
 							aria-label='Alpha Access'>
 							Alpha Access
-						</Link>
+						</Link> */}
 					</li>
 				</ul>
 			</div>
