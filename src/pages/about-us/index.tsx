@@ -1,9 +1,9 @@
-import type { NextPage } from 'next';
+import type { NextPage } from "next";
 
-import UnderDevelopment from 'sections/underDevelopment/UnderDevelopment';
+import UnderDevelopment from "sections/underDevelopment/UnderDevelopment";
 
 const AboutUs: NextPage = () => {
-	return <UnderDevelopment />;
+  return <UnderDevelopment />;
 };
 
 export default AboutUs;

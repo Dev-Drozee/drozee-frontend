@@ -1,45 +1,48 @@
-import Link from 'next/link';
-import { useRouter } from 'next/router';
-import { useRef } from 'react';
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { useRef } from "react";
 
-import { SignIn } from '@clerk/nextjs';
-import LightMobileLogo from 'assets/logo/small_white_dashed_logo.svg';
-import LoginPageSvg from 'assets/sections/login/login_page.svg';
-import Emoji from 'components/emoji/Emoji';
+import { SignIn } from "@clerk/nextjs";
+import LightMobileLogo from "assets/logo/small_white_dashed_logo.svg";
+import LoginPageSvg from "assets/sections/login/login_page.svg";
+import Emoji from "components/emoji/Emoji";
 
 const LoginPage = () => {
-	const router = useRouter();
-	const emailRef = useRef<HTMLInputElement>(null);
+  const router = useRouter();
+  const emailRef = useRef<HTMLInputElement>(null);
 
-	// handle login submit of for magic email
-	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-		event.preventDefault();
+  // handle login submit of for magic email
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
 
-		if (emailRef.current) {
-			//* call api
-			emailRef.current.value = '';
-			router.push('/email-sent');
-		}
-	};
+    if (emailRef.current) {
+      //* call api
+      emailRef.current.value = "";
+      router.push("/email-sent");
+    }
+  };
 
-	return (
-		<section className='w-full h-screen flex'>
-			<div className='w-max absolute top-8 left-10 z-10'>
-				<Link href='/' className='flex justify-start items-center gap-3'
-					title='Go back home'
-					aria-label='Go back home'>
-					<LightMobileLogo className='scale-125' />
-					<p className='text-white text-2xl'>Drozee</p>
-				</Link>
-			</div>
-			<section className='w-2/3 bg-primary-dark flex justify-center items-center'>
-				<div className='w-max'>
-					<LoginPageSvg />
-				</div>
-			</section>
-			<section className='w-1/3 bg-white flex justify-center items-center'>
-				<SignIn />
-				{/* <div className='w-max max-w-sm flex flex-col justify-start items-start gap-6'>
+  return (
+    <section className="flex h-screen w-full">
+      <div className="absolute left-10 top-8 z-10 w-max">
+        <Link
+          href="/"
+          className="flex items-center justify-start gap-3"
+          title="Go back home"
+          aria-label="Go back home"
+        >
+          <LightMobileLogo className="scale-125" />
+          <p className="text-2xl text-white">Drozee</p>
+        </Link>
+      </div>
+      <section className="flex w-2/3 items-center justify-center bg-primary-dark">
+        <div className="w-max">
+          <LoginPageSvg />
+        </div>
+      </section>
+      <section className="flex w-1/3 items-center justify-center bg-white">
+        <SignIn />
+        {/* <div className='w-max max-w-sm flex flex-col justify-start items-start gap-6'>
 					<h1 className='text-2xl text-secondary font-semibold'>
 						Welcome to Drozee!
 						<Emoji symbol='&#128075;' label='waving hand emoji' />
@@ -66,9 +69,9 @@ const LoginPage = () => {
 						</button>
 					</form>
 				</div> */}
-			</section>
-		</section>
-	);
+      </section>
+    </section>
+  );
 };
 
 export default LoginPage;

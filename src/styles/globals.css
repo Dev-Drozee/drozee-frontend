@@ -20,6 +20,9 @@
 		/* Light Pink */
 		--clr-support-3: 254, 105, 125;
 
+		/* Light Purple */
+		--clr-support-4: 237, 237, 250;
+
 		/* Dashboard Light background */
 		--clr-dashboard-light: 243, 246, 253;
 
@@ -29,10 +32,10 @@
 		--clr-text-muted-primary: 56, 56, 58;
 
 		/* Border grey */
-		--clr-border-light: 216, 214, 222, 1;
+		--clr-border-light: 216, 214, 222;
 	}
 
 	body {
-		@apply scroll-smooth overflow-x-hidden;
+		@apply overflow-x-hidden scroll-smooth;
 	}
 }

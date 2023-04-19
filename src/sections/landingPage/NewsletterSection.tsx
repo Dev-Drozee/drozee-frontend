@@ -1,65 +1,66 @@
-import { useRef, useState } from 'react';
-import axios from 'utils/axiosInstance';
+import { useRef, useState } from "react";
+import axios from "utils/axiosInstance";
 
 const NewsletterSection = () => {
-	const [isSubscribed, setIsSubscribed] = useState(false);
-	const emailRef = useRef<HTMLInputElement>(null);
+  const [isSubscribed, setIsSubscribed] = useState(false);
+  const emailRef = useRef<HTMLInputElement>(null);
 
-	const onSubmitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
-		event.preventDefault();
-		if (emailRef && emailRef.current) {
-			await axios({
-				method: 'POST',
-				url: 'newsletter',
-				headers: {
-					'content-type': 'application/json'
-				},
-				data: {
-					email: emailRef.current.value
-				}
-			})
-				.then((res) => {
-					if (res.status === 200) {
-						setIsSubscribed(true);
-						setInterval(() => {
-							setIsSubscribed(false);
-						}, 2000);
-					}
-				})
-				.catch((err) => {
-					console.log(err);
-				});
-			// Reset Form
-			emailRef.current.value = '';
-		}
-	};
+  const onSubmitHandler = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (emailRef && emailRef.current) {
+      await axios({
+        method: "POST",
+        url: "newsletter",
+        headers: {
+          "content-type": "application/json",
+        },
+        data: {
+          email: emailRef.current.value,
+        },
+      })
+        .then((res) => {
+          if (res.status === 200) {
+            setIsSubscribed(true);
+            setInterval(() => {
+              setIsSubscribed(false);
+            }, 2000);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+      // Reset Form
+      emailRef.current.value = "";
+    }
+  };
 
-	return (
-		<section className='overflow-hidden relative pt-36 pb-36 lg:pb-52 px-8'>
-			<h2 className='text-center text-lg md:text-xl xl:text-3xl font-bold font-serif'>
-				Subscribe to your newsletter & get latest updates!
-			</h2>
-			<form
-				className='mt-14 relative z-[1] flex justify-center items-center'
-				onSubmit={(event) => onSubmitHandler(event)}
-			>
-				<input
-					type='email'
-					required
-					ref={emailRef}
-					placeholder='Enter your email'
-					className='w-60 py-3 px-4 md:w-72 md:py-4 md:px-6 text-base md:text-lg rounded-l-md bg-primary-light focus:outline-none'
-				/>
-				<button
-					type='submit'
-					aria-label='Subscribe'
-					className={`text-white ${isSubscribed ? 'bg-support-1' : 'bg-primary'
-						} py-3 px-4 md:py-4 md:px-6 text-base md:text-lg rounded-r-md hover:cursor-pointer`}
-				>
-					{isSubscribed ? 'Subscribed' : 'Subscribe'}
-				</button>
-			</form>
-			{/* <svg
+  return (
+    <section className="relative overflow-hidden px-8 pb-36 pt-36 lg:pb-52">
+      <h2 className="text-center font-serif text-lg font-bold md:text-xl xl:text-3xl">
+        Subscribe to your newsletter & get latest updates!
+      </h2>
+      <form
+        className="relative z-[1] mt-14 flex items-center justify-center"
+        onSubmit={(event) => onSubmitHandler(event)}
+      >
+        <input
+          type="email"
+          required
+          ref={emailRef}
+          placeholder="Enter your email"
+          className="w-60 rounded-l-md bg-primary-light px-4 py-3 text-base focus:outline-none md:w-72 md:px-6 md:py-4 md:text-lg"
+        />
+        <button
+          type="submit"
+          aria-label="Subscribe"
+          className={`text-white ${
+            isSubscribed ? "bg-support-1" : "bg-primary"
+          } rounded-r-md px-4 py-3 text-base hover:cursor-pointer md:px-6 md:py-4 md:text-lg`}
+        >
+          {isSubscribed ? "Subscribed" : "Subscribe"}
+        </button>
+      </form>
+      {/* <svg
 				className='min-w-full absolute -bottom-28 md:-bottom-14 xl:-bottom-8 left-0 right-0'
 				width='1440'
 				height='277'
@@ -78,8 +79,8 @@ const NewsletterSection = () => {
 					strokeWidth='3'
 				/>
 			</svg> */}
-		</section>
-	);
+    </section>
+  );
 };
 
 export default NewsletterSection;
