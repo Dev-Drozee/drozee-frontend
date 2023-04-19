@@ -1,4 +1,4 @@
-import { useState, useRef } from 'react';
+import { useRef, useState } from 'react';
 import axios from 'utils/axiosInstance';
 
 const NewsletterSection = () => {
@@ -53,15 +53,14 @@ const NewsletterSection = () => {
 				<button
 					type='submit'
 					aria-label='Subscribe'
-					className={`text-white ${
-						isSubscribed ? 'bg-support-1' : 'bg-primary'
-					} py-3 px-4 md:py-4 md:px-6 text-base md:text-lg rounded-r-md hover:cursor-pointer`}
+					className={`text-white ${isSubscribed ? 'bg-support-1' : 'bg-primary'
+						} py-3 px-4 md:py-4 md:px-6 text-base md:text-lg rounded-r-md hover:cursor-pointer`}
 				>
 					{isSubscribed ? 'Subscribed' : 'Subscribe'}
 				</button>
 			</form>
-			<svg
-				className='max-w-full absolute -bottom-28 md:-bottom-14 xl:-bottom-8 left-0 right-0'
+			{/* <svg
+				className='min-w-full absolute -bottom-28 md:-bottom-14 xl:-bottom-8 left-0 right-0'
 				width='1440'
 				height='277'
 				viewBox='0 0 1440 277'
@@ -78,7 +77,7 @@ const NewsletterSection = () => {
 					stroke='#5645BA'
 					strokeWidth='3'
 				/>
-			</svg>
+			</svg> */}
 		</section>
 	);
 };

@@ -38,107 +38,112 @@ const Navbar = () => {
 		>
 			{/* Desktop Navbar */}
 			<div
-				className={`hidden xl:py-6 xl:px-20 xl:flex xl:justify-between xl:items-center ${navbarScrolled ? 'backdrop-blur-3xl bg-black bg-opacity-20' : null
-					} transition-all duration-200`}
+				className={`hidden lg:py-6 lg:px-20 lg:flex lg:justify-center lg:items-center ${navbarScrolled ? 'bg-primary' : 'bg-transparent'
+					} transition-all duration-500`}
 			>
-				<div className='w-max'>
-					<Link href='/' title='Home'
-						aria-label='Home'
-						className='flex justify-center items-center gap-3'>
-						{navbarScrolled ? (
-							<LightMonitorLogo aria-label='Logo' />
-						) : (
-							<DarkMonitorLogo aria-label='Logo' />
-						)}
-						<p
-							className={`text-xl font-medium ${navbarScrolled ? 'text-white' : 'text-primary'
-								}`}
-						>
-							Drozee
-						</p>
-					</Link>
-				</div>
-				<ul className='flex justify-center items-center gap-12'>
-					<li>
-						<div
-							title='Products'
-							aria-label='Products'
-							className='flex justify-center items-center gap-2 text-white cursor-pointer group relative'
-						>
-							<p>Products</p>
-							<svg
-								width='9'
-								height='5'
-								viewBox='0 0 9 5'
-								fill='none'
-								xmlns='http://www.w3.org/2000/svg'
+				<div className='w-full max-w-7xl flex justify-between items-center'>
+					<div className='w-max'>
+						<Link href='/' title='Home'
+							aria-label='Home'
+							className='flex justify-center items-center gap-3'>
+							{navbarScrolled ? (
+								<LightMonitorLogo aria-label='Logo' />
+							) : (
+								<DarkMonitorLogo aria-label='Logo' />
+							)}
+							<p
+								className={`text-xl font-medium ${navbarScrolled ? 'text-white' : 'text-primary'
+									}`}
 							>
-								<path
-									d='M1 1L4.5 4L8 1'
-									stroke='white'
-									strokeWidth='1.5'
-									strokeLinecap='round'
-								/>
-							</svg>
-							<ul className='hidden group-hover:block w-max absolute top-6 left-0 z-10 bg-white text-black rounded-lg py-4 px-8 shadow-md'>
-								<li className='pb-2'>
-									<Link href='/dashboard' title='Folio'
-										aria-label='Folio'
-										className='hover:text-secondary'>
-										Folio
-									</Link>
-								</li>
-								<li className='pb-2'>
-									<Link href='/dashboard' title='Learn Track'
-										aria-label='Learn Track'
-										className='hover:text-secondary'>
-										LearnTrack
-									</Link>
-								</li>
-								<li className='pb-2'>
-									<Link href='/dashboard' title='Learn Path'
-										aria-label='Learn Path'
-										className='hover:text-secondary'>
-										LearnPath
-									</Link>
-								</li>
-								<li>
-									<Link href='/dashboard' title='StepDegree'
-										aria-label='StepDegree'
-										className='hover:text-secondary'>
-										StepDegree
-									</Link>
-								</li>
-							</ul>
-						</div>
-					</li>
-					<li>
-						<Link href='/about-us' className='text-white' title='About us' aria-label='About us'>
-							About us
+								Drozee
+							</p>
 						</Link>
-					</li>
-					<li>
-						<Link href='/partners' className='text-white' title='Partners' aria-label='Partners'>
-							Partners
-						</Link>
-					</li>
-					<li>
-						<Link href='/login' className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
-							title='Login'
-							aria-label='Login'>
-							Login / Signup
-						</Link>
-						{/* <Link href='/alpha-access' className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
+					</div>
+					<ul className='flex justify-center items-center gap-12'>
+						<li>
+							<div
+								title='Products'
+								aria-label='Products'
+								className={`flex justify-center items-center gap-2 ${navbarScrolled ? 'text-white' : 'text-primary'} cursor-pointer group relative`}
+							>
+								<p>Products</p>
+								<svg
+									width='9'
+									height='5'
+									viewBox='0 0 9 5'
+									fill='none'
+									xmlns='http://www.w3.org/2000/svg'
+								>
+									<path
+										className={`${navbarScrolled ? 'stroke-white' : 'stroke-primary'}`}
+										d='M1 1L4.5 4L8 1'
+										// stroke='white'
+										strokeWidth='1.5'
+										strokeLinecap='round'
+									/>
+								</svg>
+								<ul className='hidden group-hover:block w-max absolute top-6 left-0 z-10 bg-white text-black rounded-lg py-4 px-8 shadow-md'>
+									<li className='pb-2'>
+										<Link href='/dashboard' title='Folio'
+											aria-label='Folio'
+											className='hover:text-secondary'>
+											Folio
+										</Link>
+									</li>
+									<li className='pb-2'>
+										<Link href='/dashboard' title='Learn Track'
+											aria-label='Learn Track'
+											className='hover:text-secondary'>
+											LearnTrack
+										</Link>
+									</li>
+									<li className='pb-2'>
+										<Link href='/dashboard' title='Learn Path'
+											aria-label='Learn Path'
+											className='hover:text-secondary'>
+											LearnPath
+										</Link>
+									</li>
+									<li>
+										<Link href='/dashboard' title='StepDegree'
+											aria-label='StepDegree'
+											className='hover:text-secondary'>
+											StepDegree
+										</Link>
+									</li>
+								</ul>
+							</div>
+						</li>
+						<li>
+							<Link href='/about-us' className={`${navbarScrolled ? 'text-white hover:text-primary-light' : 'text-priamry hover:text-secondary'
+								}`} title='About us' aria-label='About us'>
+								About us
+							</Link>
+						</li>
+						<li>
+							<Link href='/partners' className={`${navbarScrolled ? 'text-white hover:text-primary-light' : 'text-priamry hover:text-secondary'
+								}`} title='Partners' aria-label='Partners'>
+								Partners
+							</Link>
+						</li>
+						<li>
+							<Link href='/login' className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
+								title='Login'
+								aria-label='Login'>
+								Login / Signup
+							</Link>
+							{/* <Link href='/alpha-access' className='bg-primary-light text-primary py-3 px-7 rounded-3xl font-semibold text-base hover:text-secondary'
 							title='Alpha Access'
 							aria-label='Alpha Access'>
 							Alpha Access
 						</Link> */}
-					</li>
-				</ul>
+						</li>
+					</ul>
+				</div>
 			</div>
 			{/* Mobile Navbar */}
 			<div
-				className={`w-full py-4 px-4 flex justify-between items-center relative xl:hidden ${menu ? 'bg-primary' : 'backdrop-blur-3xl bg-black bg-opacity-20'
+				className={`w-full py-4 px-4 flex justify-between items-center relative lg:hidden ${menu ? 'bg-primary' : 'backdrop-blur-3xl bg-black bg-opacity-20'
 					}`}
 			>
 				<div className='w-max'>
