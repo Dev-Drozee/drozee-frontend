@@ -1,18 +1,19 @@
-import { useUser } from '@clerk/nextjs';
-import DashboardLayout from 'layout/DashboardLayout';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
-import { useEffect } from 'react';
+import { useUser } from "@clerk/nextjs";
+import DashboardLayout from "layout/DashboardLayout";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
+import CareerPage from "sections/dashboardPage/Career";
 
 export default function Index() {
   const router = useRouter();
-  const { isLoaded, isSignedIn, user } = useUser()
+  const { isLoaded, isSignedIn, user } = useUser();
 
   useEffect(() => {
     if (isLoaded && !isSignedIn) {
-      router.replace('/login');
+      router.replace("/login");
     }
-  }, [isLoaded, isSignedIn, router])
+  }, [isLoaded, isSignedIn, router]);
 
   return (
     <>
@@ -20,11 +21,8 @@ export default function Index() {
         <title>Dashboard</title>
       </Head>
       <DashboardLayout rightSidebar={<div>Right Side bar</div>}>
-        <div className='text-justify'>
-          <h2>Welcome to career</h2>
-          <p>User: {user?.firstName}</p>
-        </div>
+        <CareerPage />
       </DashboardLayout>
     </>
-  )
+  );
 }

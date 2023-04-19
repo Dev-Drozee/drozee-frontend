@@ -1,10 +1,11 @@
+import { useUser } from "@clerk/nextjs";
 import type { NextPage } from "next";
 import Head from "next/head";
-
-import { useUser } from "@clerk/nextjs";
-import DashboardLayout from "layout/DashboardLayout";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
+
+import DashboardCard from "components/dashboardCard";
+import DashboardLayout from "layout/DashboardLayout";
 
 const Dashboard: NextPage = () => {
   const router = useRouter();
@@ -22,7 +23,7 @@ const Dashboard: NextPage = () => {
         <title>Dashboard</title>
       </Head>
       <DashboardLayout rightSidebar={<div>Right Side bar</div>}>
-        <div className="mt-10 flex flex-col gap-4">
+        <div className="mt-10 flex flex-col gap-10">
           <div className="flex flex-col gap-2">
             <h1 className="text-4xl font-semibold text-gray-700">Dashboard</h1>
             <p className="text-sm text-gray-500">
@@ -31,7 +32,7 @@ const Dashboard: NextPage = () => {
             </p>
           </div>
           <div className="relative flex justify-between gap-4">
-            <div className="absolute bottom-0 left-0 w-full rounded-2xl bg-support-4 px-4 pb-20 pt-4">
+            <div className="absolute bottom-0 left-0 w-full rounded-2xl bg-support-4 px-4 pb-36 pt-4">
               <h2 className="text-2xl font-bold text-gray-700">
                 Welcome, {user?.firstName}
               </h2>
@@ -149,6 +150,22 @@ const Dashboard: NextPage = () => {
           </div>
           <div>
             <h2 className="text-2xl font-bold text-gray-700">Features</h2>
+            <div className="mt-4 flex items-start justify-start gap-8">
+              <DashboardCard
+                title={"Career"}
+                description={
+                  "All your courses in one single place, when you can keep tracking of most important ones!"
+                }
+                link={"/dashboard/career"}
+              />
+              <DashboardCard
+                title={"Jobs"}
+                description={
+                  "All your courses in one single place, when you can keep tracking of most important ones!"
+                }
+                link={"/dashboard/jobs"}
+              />
+            </div>
           </div>
         </div>
       </DashboardLayout>
